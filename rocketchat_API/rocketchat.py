@@ -209,6 +209,10 @@ class RocketChat:
     def channels_info(self, room_id, **kwargs):
         """Gets a channel’s information."""
         return self.__call_api_get('channels.info', roomId=room_id, kwargs=kwargs)
+    
+    def channels_members(self, room_id, **kwargs):
+        """Gets a channel’s information."""
+        return self._RocketChat__call_api_get('channels.members', roomId=room_id, kwargs=kwargs)
 
     def channels_history(self, room_id, **kwargs):
         """Retrieves the messages from a channel."""
